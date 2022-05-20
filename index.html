@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thought Jumper Entry Gate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+
+<body>
+
+
+    <body>
+        <div class="content"><span class="content__title">
+                <h1>Open Me</h1><i>🗝️</i>
+            </span>
+            <p>Hi there, the content of this page is locked! Use the keypad to unlock it. See if you can guess the
+                passcode.
+            </p>
+            <p>You might want to take a look trough the code to get an idea of what is going on. Feel free to modify it
+                as
+                you see fit to help you solve the puzzle.</p>
+            <div class="keypad">
+                <button class="keypad__button"><span>Unlock</span><i class="fas fa-lock"></i>
+                </button>
+                <div class="keypad__overlay">
+                    <dialog class="keypad__body">
+                        <div class="keypad__display">
+                            <input class="keypad__response hidden" type="text" />
+                            <input id="keypad-input" type="password" maxlength="4" />
+                        </div>
+                        <button class="keypad__key" value="1"><i>1</i>
+                        </button>
+                        <button class="keypad__key" value="2"><i>2</i>
+                        </button>
+                        <button class="keypad__key" value="3"><i>3</i>
+                        </button>
+                        <button class="keypad__key" value="4"><i>4</i>
+                        </button>
+                        <button class="keypad__key" value="5"><i>5</i>
+                        </button>
+                        <button class="keypad__key" value="6"><i>6</i>
+                        </button>
+                        <button class="keypad__key" value="7"><i>7</i>
+                        </button>
+                        <button class="keypad__key" value="8"><i>8</i>
+                        </button>
+                        <button class="keypad__key" value="9"><i>9</i>
+                        </button>
+                        <button class="keypad__key" value="back" id="back"><i class="fas fa-times"></i>
+                        </button>
+                        <button class="keypad__key" value="0"><i>0</i>
+                        </button>
+                        <button class="keypad__key" value="accept" id="accept"><i class="fas fa-check"></i>
+                        </button>
+                    </dialog>
+                </div>
+            </div>
+            <p class="hidden" id="result"></p>
+            <div class="solution">
+                <button class="solution__button">Give me the solution</button>
+                <div class="solution__area hidden"></div>
+            </div>
+        </div>
+        <script src="./main.js"></script>
+
+    </body>
+
+</html>

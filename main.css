@@ -1,0 +1,171 @@
+.hidden {
+    display: none !important;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    background-color: #ffcda3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  div,
+  span,
+  button,
+  p,
+  h1 {
+    color: #293b5f;
+    font-family: "IBM Plex Mono", monospace;
+  }
+  
+  h1 {
+    font-family: "Press Start 2P", cursive;
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80ch;
+    line-height: 2em;
+    gap: 2em;
+    margin: 10em 2em;
+  }
+  .content__title {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    font-size: 3rem;
+  }
+  
+  .keypad:focus-within .keypad__overlay {
+    opacity: 1;
+    pointer-events: initial;
+  }
+  .keypad__body {
+    border: none;
+    background-color: #595260;
+    border-radius: 0.8em;
+    padding: 1.5em;
+    box-shadow: 0px -4px 0px 0px #262329 inset, 0px 4px 1px 2px rgba(0, 0, 0, 0.2);
+    display: grid;
+    gap: 0.8em;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .keypad__overlay {
+    transition: 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .keypad__button {
+    padding: 1em 2em;
+    display: flex;
+    gap: 1em;
+    background-color: #c9d8b6;
+    box-shadow: 0px -4px 0px 0px #b0c695 inset, 0px 4px 1px 2px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    background-color: #c9d8b6;
+    border: 0;
+    cursor: pointer;
+  }
+  .keypad__button:active {
+    background-color: #b0c695;
+    box-shadow: 0px -2px 0px 0px #98b474 inset, 0px 2px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  .keypad__button:focus-within ~ .keypad {
+    display: block;
+    pointer-events: initial;
+  }
+  .keypad__display {
+    grid-column: 1/span 3;
+  }
+  .keypad__display input {
+    pointer-events: none;
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    width: 15rem;
+    border-radius: 0.5rem;
+    padding: 0.1rem;
+    border: 0;
+    color: #57837b;
+    background-color: #f1ecc3;
+    box-shadow: 0px 4px 0px 0px #b0c695 inset, 0px -4px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  .keypad__display input[type=password] {
+    font-family: caption;
+  }
+  .keypad__key {
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: 0.1s ease;
+    background-color: #fcf8e8;
+    box-shadow: 0px -4px 0px 0px #f6eabb inset, 0px 4px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  .keypad__key:active {
+    background-color: #f6eabb;
+    box-shadow: 0px -2px 0px 0px #f0dd8e inset, 0px 2px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  .keypad__key#accept {
+    background-color: #c9d8b6;
+    box-shadow: 0px -4px 0px 0px #b0c695 inset, 0px 4px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  .keypad__key#accept:active {
+    background-color: #b0c695;
+    box-shadow: 0px -2px 0px 0px #98b474 inset, 0px 2px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  .keypad__key#back {
+    background-color: #ee9595;
+    box-shadow: 0px -4px 0px 0px #e76969 inset, 0px 4px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  .keypad__key#back:active {
+    background-color: #e76969;
+    box-shadow: 0px -2px 0px 0px #e03d3d inset, 0px 2px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  #result {
+    color: #293b5f;
+    background-color: #eeeeee;
+    box-shadow: 0px 4px 0px 0px #d5d5d5 inset, 0px -4px 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    border-radius: 0.5em;
+  }
+  
+  .solution {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
+  .solution__button {
+    font-size: 1rem;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+    cursor: pointer;
+  }
